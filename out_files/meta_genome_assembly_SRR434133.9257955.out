@@ -1,0 +1,26 @@
+2024-04-08 11:15:34 - MEGAHIT v1.2.9
+2024-04-08 11:15:34 - Using megahit_core with POPCNT support
+2024-04-08 11:15:34 - Convert reads to binary library
+2024-04-08 11:18:03 - INFO  sequence/io/sequence_lib.cpp  :   75 - Lib 0 (/home/maal9346/genome_analysis/0_rawdata/3_Thrash_2017/DNA_trimmed/SRR4342133_1.paired.trimmed.fastq.gz,/home/maal9346/genome_analysis/0_rawdata/3_Thrash_2017/DNA_trimmed/SRR4342133_2.paired.trimmed.fastq.gz): pe, 59954188 reads, 101 max length
+2024-04-08 11:18:07 - INFO  utils/utils.h                 :  152 - Real: 152.8566	user: 60.9011	sys: 8.4348	maxrss: 273368
+2024-04-08 11:18:07 - k-max reset to: 119 
+2024-04-08 11:18:07 - Start assembly. Number of CPU threads 16 
+2024-04-08 11:18:07 - k list: 21,29,39,59,79,99,119 
+2024-04-08 11:18:07 - Memory used: 121485444710
+2024-04-08 11:18:07 - Extract solid (k+1)-mers for k = 21 
+2024-04-08 11:43:36 - Build graph for k = 21 
+2024-04-08 12:03:35 - Assemble contigs from SdBG for k = 21
+2024-04-08 13:35:43 - Local assembly for k = 21
+2024-04-08 13:45:11 - Extract iterative edges from k = 21 to 29 
+2024-04-08 14:05:42 - Build graph for k = 29 
+2024-04-08 14:14:53 - Assemble contigs from SdBG for k = 29
+2024-04-08 15:10:01 - Local assembly for k = 29
+2024-04-08 15:23:11 - Extract iterative edges from k = 29 to 39 
+2024-04-08 15:28:26 - Build graph for k = 39 
+2024-04-08 15:34:27 - Assemble contigs from SdBG for k = 39
+2024-04-08 16:11:57 - Local assembly for k = 39
+2024-04-08 16:32:25 - Extract iterative edges from k = 39 to 59 
+2024-04-08 16:35:37 - Build graph for k = 59 
+2024-04-08 16:39:59 - Assemble contigs from SdBG for k = 59
+2024-04-08 17:05:51 - Local assembly for k = 59
+slurmstepd: error: *** JOB 9257955 ON s7 CANCELLED AT 2024-04-08T17:15:43 DUE TO TIME LIMIT ***
