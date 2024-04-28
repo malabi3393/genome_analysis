@@ -1,0 +1,22 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+k29_178825_1         -            694 Ribosomal_S13        PF00416.17   107    0.0003   15.4   0.2   1   2    0.0027      0.64    4.7   0.0    23    60   326   363   310   390 0.87 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+k29_178825_1         -            694 Ribosomal_S13        PF00416.17   107    0.0003   15.4   0.2   2   2   0.00039     0.093    7.4   0.0    17    66   449   497   436   520 0.84 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+k29_1152907_2        -            423 Rho_RNA_bind         PF07497.7     78   4.5e-13   42.8   0.0   1   1   3.5e-15   8.2e-13   42.0   0.0     4    59    55   110    53   126 0.93 # 876 # 2144 # 1 # ID=33_2;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.535
+k29_532965_1         -             27 PGK                  PF00162.14   384   1.1e-06   21.5   0.2   1   1     5e-09   1.2e-06   21.4   0.2     1    22     5    26     5    27 0.94 # 1 # 81 # -1 # ID=1_1;partial=10;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=11-12bp;gc_cont=0.469
+k29_2426194_2        -            301 TIGR00755            TIGR00755    256   6.6e-68  222.5   0.1   1   1   3.3e-70   7.7e-68  222.3   0.1     2   255    20   292    19   293 0.94 # 611 # 1513 # -1 # ID=52_2;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.507
+k29_178825_1         -            694 FbpA                 PF05833.6    455   1.3e-11   37.7   0.1   1   2   1.3e-08     3e-06   20.1   0.0   159   238   283   364   275   379 0.85 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+k29_178825_1         -            694 FbpA                 PF05833.6    455   1.3e-11   37.7   0.1   2   2     4e-07   9.4e-05   15.1   0.0   176   238   430   493   415   513 0.88 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+k29_178825_1         -            694 Topo-VIb_trans       PF09239.6    160   4.6e-53  173.1   0.0   1   2   2.3e-17   5.5e-15   49.4   0.0     1    57   369   425   369   432 0.91 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+k29_178825_1         -            694 Topo-VIb_trans       PF09239.6    160   4.6e-53  173.1   0.0   2   2   1.8e-39   4.3e-37  121.2   0.0    55   159   496   604   486   605 0.94 # 4 # 2085 # -1 # ID=2_1;partial=00;start_type=TTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.504
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /scratch/9370461/4421ac10-1a35-4d01-8d52-33c59107e4ff
+# Target file:     /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/genes.faa
+# Option settings: hmmsearch --domtblout /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/hmmer.analyze.txt --noali --notextw -E 0.1 --domE 0.1 --cpu 2 /scratch/9370461/4421ac10-1a35-4d01-8d52-33c59107e4ff /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/genes.faa 
+# Current dir:     /domus/h1/maal9346/genome_analysis/5_binning_evaluation
+# Date:            Sun Apr 28 18:46:17 2024
+# [ok]

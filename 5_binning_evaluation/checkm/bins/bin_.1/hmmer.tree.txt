@@ -1,0 +1,13 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /scratch/9370461/2d04f155-d286-41f8-a47b-c434ad029531
+# Target file:     /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/genes.faa
+# Option settings: hmmsearch --domtblout /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/hmmer.tree.txt --noali --notextw -E 0.1 --domE 0.1 --cpu 2 /scratch/9370461/2d04f155-d286-41f8-a47b-c434ad029531 /home/maal9346/genome_analysis/5_binning_evaluation/checkm/bins/bin_.1/genes.faa 
+# Current dir:     /domus/h1/maal9346/genome_analysis/5_binning_evaluation
+# Date:            Sun Apr 28 18:45:20 2024
+# [ok]
