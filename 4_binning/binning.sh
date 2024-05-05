@@ -14,9 +14,9 @@ module load bioinfo-tools
 module load MetaBat
 
 
-export FILEPATH=/home/maal9346/genome_analysis/2_dna_assembly/results_0412_129/final.contigs.fa
+export FILEPATH=/home/maal9346/genome_analysis/2_dna_assembly
 
 
-cd /home/maal9346/genome_analysis/4_binning
 
-metabat -i $FILEPATH -o bin_ 
+
+metabat -i $FILEPATH/megahit_results_129/final.contigs.fa $FILEPATH/megahit_results_133/final.contigs.fa -o bin_no 
