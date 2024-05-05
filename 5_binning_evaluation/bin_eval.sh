@@ -1,10 +1,10 @@
 #!/bin/bash -l
 #SBATCH -A uppmax2024-2-7
 #SBATCH -M snowy
-#SBATCH -p core
+#SBATCH -p co
 #SBATCH -n 2
-#SBATCH -t 00:30:00
-#SBATCH -J 5_binning_eval_0428_643PM
+#SBATCH -t 03:30:00
+#SBATCH -J 5_binning_eval
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user mariam.alabi@outlook.com
 #SBATCH --output=%x.%j.out
