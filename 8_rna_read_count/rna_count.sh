@@ -2,8 +2,8 @@
 #SBATCH -A uppmax2024-2-7
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 4
-#SBATCH -t 05:30:00
+#SBATCH -n 8
+#SBATCH -t 25:30:00
 #SBATCH -J counts
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user mariam.alabi@outlook.com
@@ -28,9 +28,13 @@ done
 
 echo $alignment_files
 
-for bin in $GFF/bin.*
+#bin is the folder
+for bin in $GFF/bin_no.*
 do
+
+
 #removes full path name
 bin_no=$(basename "$bin")
+sed '/^##FASTA/Q' $bin/${bin_no}.gff > $bin/${bin_no}_noseq.gff
 htseq-count -f bam $alignment_files $bin/${bin_no}_noseq.gff > output_counts.txt
 done 
