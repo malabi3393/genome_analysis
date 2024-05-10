@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 8
 #SBATCH -t 25:30:00
-#SBATCH -J counts
+#SBATCH -J counts_five
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user mariam.alabi@outlook.com
 #SBATCH --output=%x.%j.out
@@ -14,7 +14,7 @@ module load htseq
 module load samtools
 
 
-ALI=/home/maal9346/genome_analysis/7_mapping_rna_bin/sorted_bam
+ALI=/home/maal9346/genome_analysis/7_mapping_rna_bin/top_5/sorted_bam
 GFF=/home/maal9346/genome_analysis/6_functional_annotation
 
 
@@ -32,9 +32,8 @@ echo $alignment_files
 for bin in $GFF/bin_no.*
 do
 
-
 #removes full path name
 bin_no=$(basename "$bin")
 sed '/^##FASTA/Q' $bin/${bin_no}.gff > $bin/${bin_no}_noseq.gff
-htseq-count -f bam $alignment_files $bin/${bin_no}_noseq.gff > output_counts.txt
+htseq-count -f bam $alignment_files $bin/${bin_no}_noseq.gff > output_counts_top_5.txt
 done 
