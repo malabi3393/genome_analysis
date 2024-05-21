@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 
-df = pd.read_csv('/home/maal9346/genome_analysis/5_binning_evaluation/combined/checkm_results/storage/bin_stats_ext.tsv', sep ='\t', header = None)
+df = pd.read_csv('/home/maal9346/genome_analysis/5_binning_evaluation/checkm_results/storage/bin_stats_ext.tsv', sep ='\t', header = None)
 
 dicti={}
 for _, row in df.iterrows():
@@ -21,7 +21,7 @@ sorted_datas = dict(sorted(sorted_data.items(), key = lambda kv : -kv[1][0]))
 complete_filter = {k: v for k,v in sorted_datas.items() if v[0] > 80}
 contaim_complete_filter = {k: v for k,v in complete_filter.items() if v[1] < 100}
 
-f = open("/home/maal9346/genome_analysis/5_binning_evaluation/combined/top_bins_combined.txt", "w+")
+f = open("/home/maal9346/genome_analysis/5_binning_evaluation/top_bins_combined.txt", "w+")
 
 for i, k in zip(range(5), contaim_complete_filter.items()):
     f.write(f"{k[0]}\n")
@@ -40,10 +40,9 @@ for name in cols:
         df2 = df2.drop(name, axis = 1)
 top_bins = []
 try: 
-    with open('/home/maal9346/genome_analysis/5_binning_evaluation/combined/top_bins_combined.txt', 'r') as f:
+    with open('/home/maal9346/genome_analysis/5_binning_evaluation/top_bins_combined.txt', 'r') as f:
         top_bins = f.read()
         top_bins = top_bins.split()
-        print(top_bins)
 except FileNotFoundError:
     print("file not found")
 
@@ -60,7 +59,7 @@ ax.axis('off')
 table = pd.plotting.table(ax, df3, loc='center', cellLoc='center')
 
 # Save the table as a PNG image
-plt.savefig('best_bins.png', bbox_inches='tight', pad_inches=0.1)
+plt.savefig('img/best_bins.png', bbox_inches='tight', pad_inches=0.1)
 plt.close()
 
 
@@ -68,7 +67,7 @@ plt.close()
 generate the number of contigs for each bin 
 """
 
-df = pd.read_csv('/home/maal9346/genome_analysis/5_binning_evaluation/combined/checkm_results/storage/bin_stats.analyze.tsv', sep ='\t', header = None)
+df = pd.read_csv('/home/maal9346/genome_analysis/5_binning_evaluation/checkm_results/storage/bin_stats.analyze.tsv', sep ='\t', header = None)
 dicti={}
 for _, row in df.iterrows():
     dicti[row[0]] = ast.literal_eval(row[1])
@@ -87,5 +86,5 @@ ax.axis('off')
 table = pd.plotting.table(ax, df2, loc='center', cellLoc='center')
 
 # Save the table as a PNG image
-plt.savefig('num_contigs.png', bbox_inches='tight', pad_inches=0.1)
+plt.savefig('img/num_contigs.png', bbox_inches='tight', pad_inches=0.1)
 plt.close()
