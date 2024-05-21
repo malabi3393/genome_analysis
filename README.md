@@ -1,4 +1,4 @@
-# Genome Analysis 2024: 
+# Genome Analysis Project 2024 
 ### Mariam Alabi
 
 
