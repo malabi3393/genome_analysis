@@ -15,7 +15,7 @@ module load bioinfo-tools
 module load prokka
 
 IN=/home/maal9346/genome_analysis/4_binning
-WRDIR=/home/maal9346/genome_analysis/6_functional_annotation/combined
+WRDIR=/home/maal9346/genome_analysis/6_functional_annotation
 
 while read bin
 do 

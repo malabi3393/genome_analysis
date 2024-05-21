@@ -2,7 +2,7 @@
 #SBATCH -A uppmax2024-2-7
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 4
+#SBATCH -n 16
 #SBATCH -t 05:30:00
 #SBATCH -J 7mapping
 #SBATCH --mail-type=ALL
@@ -17,29 +17,21 @@ module load samtools
 
 #1. index the bin
 
-REF_DIR=/home/maal9346/genome_analysis/4_binning/bins
+REF_DIR=/home/maal9346/genome_analysis/4_binning/combined
 READ_DIR=/home/maal9346/genome_analysis/0_rawdata/3_Thrash_2017/RNA_untrimmed
-WRDIR=/home/maal9346/genome_analysis/7_mapping_rna_bin/top_5
+WRDIR=/home/maal9346/genome_analysis/7_mapping_rna_bin/combined
 
-mkdir -p $WRDIR/sam
-mkdir -p $WRDIR/bam
+# mkdir -p $WRDIR/sam
+# mkdir -p $WRDIR/bam
+# mkdir -p $WRDIR/sorted_bam
 
-# #do the indexing
-# for ref in $REF_DIR/*.fa 
-# do 
-# #removes full path name 
-# filename=$(basename "$ref")
-# #removes extension
-# name=${filename%.fa}
-# bwa index $ref 
-# done
 
 
 while read bin
 do 
 filename=$(basename $REF_DIR/${bin}.fa)
 name=${filename%.fa}
-bwa index $REF_DIR/${bin}.fa 
+# bwa index $REF_DIR/${bin}.fa 
 for read1 in $READ_DIR/*.1.fastq.gz
 do
 #replace .1 with .2
@@ -56,18 +48,18 @@ rm $WRDIR/sam/${bin}_${read_name}.sam
 #sort the bam files
 samtools sort -o $WRDIR/sorted_bam/${bin}_${read_name}.sorted.bam $WRDIR/bam/${bin}_${read_name}.bam
 
+#index the file
+samtools index $WRDIR/sorted_bam/${bin}_${read_name}.sorted.bam
+
+samtools idxstats $WRDIR/sorted_bam/${bin}_${read_name}.sorted.bam > $WRDIR/sorted_bam/${bin}_${read_name}.aln.stats
 
 
-# #try sorting sam files
-# samtools sort -o $WRDIR/sorted_sam/${name}_${read_name}.sorted.sam $WRDIR/sam/${name}_${read_name}.sam
+
 
 done
-done < /home/maal9346/genome_analysis/5_binning_evaluation/top_bins.txt
+done < /home/maal9346/genome_analysis/5_binning_evaluation/combined/top_bins_combined.txt
 
-# #remove sam files 
 # rm -r $WRDIR/sam
-
-# #remove bam files 
 # rm -r $WRDIR/bam
     
     
